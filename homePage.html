@@ -29,7 +29,7 @@
 			  		</form>
 			  	</li>
 			  	<li>
-				    <a class="nav-link" href="signup.html" style="color:teal">Sign Up</a>
+				    <a class="nav-link" href="#signup" style="color:teal">Sign Up</a>
 				</li>
 				<li class="nav-item">
 				    <a class="nav-link fa fa-user" href="#profile" style="font-size:20px;color:teal"></a>
@@ -59,7 +59,7 @@
 								</div>
 
 								<div class="modal-footer">
-									<a href="signup.html">Sign Up</a>
+									<a href="#signupPage">Sign Up</a>
 								</div>
 
 							</div>
@@ -126,17 +126,19 @@
 
 	    <center>
 
-				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
-				<span id="changeNumberBounded">0</span>
+				<button class="btn btn-primary" onclick="increaseValue()">D A N K</button>
+				<span id="updateNum">0</span>
 				<script>
-					function updateValueByNumBounded(changeBy){
-						var number = document.getElementById("changeNumberBounded").innerHTML;
-						number= parseInt(number) + changeBy;
-						if(number > 5)
+					function increaseValue(){
+						var number = document.getElementById("updateNum").innerHTML;
+						if(number >= 5)
 						{
 							number = 5;
 						}
-						document.getElementById("changeNumberBounded").innerHTML = number;
+						else{
+						number++;
+					}
+						document.getElementById("updateNum").innerHTML = number;
 					}
 				</script>
 
@@ -160,17 +162,19 @@
 
 	    <center>
 
-				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
-				<span id="changeNumberBounded">0</span>
+				<button class="btn btn-primary" onclick="increaseValue()">D A N K</button>
+				<span id="numUpdate">0</span>
 				<script>
-					function updateValueByNumBounded(changeBy){
-						var number = document.getElementById("changeNumberBounded").innerHTML;
-						number= parseInt(number) + changeBy;
-						if(number > 5)
+					function increaseValue(){
+						var number = document.getElementById("numUpdate").innerHTML;
+						if(number >= 5)
 						{
 							number = 5;
 						}
-						document.getElementById("changeNumberBounded").innerHTML = number;
+						else{
+						number++;
+					}
+						document.getElementById("numUpdate").innerHTML = number;
 					}
 				</script>
 
@@ -274,9 +278,6 @@
 			    </li>
 			    <li class="nav-item">
 			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="PopUsers.html">Popular Users</a>
-			    </li>
-				<li class="nav-item">
-			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="videopage.html">Video Stream</a>
 			    </li>
 			  </ul>
 		</nav>
